@@ -1,0 +1,9 @@
+# Python / Flask
+venv/
+*.pyc
+__pycache__/
+database.db
+
+# Node.js / React
+frontend/node_modules/
+.DS_Store
