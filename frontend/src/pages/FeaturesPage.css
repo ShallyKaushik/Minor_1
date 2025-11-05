@@ -1,0 +1,114 @@
+/* frontend/src/pages/FeaturesPage.css */
+
+.features-page-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px;
+  box-sizing: border-box;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.features-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 16px 0;
+}
+
+.features-header p {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.features-content-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column by default */
+  gap: 30px;
+}
+
+.feature-item-card {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.feature-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.feature-item-icon {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafb;
+}
+
+.feature-item-card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 12px 0;
+}
+
+.feature-item-card p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  flex-grow: 1; /* This makes the text fill the space */
+  margin-bottom: 24px;
+}
+
+.feature-item-button {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+  border: 1px solid var(--color-primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.feature-item-button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* A style for "Coming Soon" buttons */
+.feature-item-button.disabled {
+  background-color: var(--color-border);
+  border-color: var(--color-border);
+  color: var(--color-text-light);
+  cursor: not-allowed;
+}
+
+/* On larger screens, go to a 2-column layout */
+@media (min-width: 900px) {
+  .features-content-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+  }
+
+  /* Make the first item span both columns */
+  .feature-item-card:first-child {
+    grid-column: 1 / -1;
+  }
+}

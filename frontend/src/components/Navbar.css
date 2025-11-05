@@ -1,0 +1,109 @@
+/* frontend/src/components/Navbar.css */
+
+.navbar-header {
+  width: 100%;
+  height: 80px;
+  background-color: var(--color-bg-white); /* Clean white navbar */
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 1. Logo */
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space for the icon */
+}
+/* Optional: Style for the logo icon */
+.logo-icon {
+  color: var(--color-primary);
+}
+
+/* 2. Nav Links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 32px;
+}
+
+.navbar-links a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-light); /* Lighter text for links */
+  text-decoration: none;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: var(--color-primary); /* Blue hover */
+}
+
+/* Style for the active page link */
+.navbar-links a.active {
+  color: var(--color-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* 3. Action Buttons */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-button-secondary,
+.navbar-button-primary {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  text-align: center;
+}
+
+/* "Login" style (secondary) */
+.navbar-button-secondary {
+  background-color: var(--color-bg-white);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+
+.navbar-button-secondary:hover {
+  background-color: var(--color-bg);
+}
+
+/* "Predict Now" style (primary) */
+.navbar-button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg-white);
+  border: 1px solid var(--color-primary);
+}
+
+.navbar-button-primary:hover {
+  background-color: var(--color-primary-dark);
+}

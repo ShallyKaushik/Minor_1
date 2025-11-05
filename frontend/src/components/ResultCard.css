@@ -1,0 +1,80 @@
+/* This class is applied by PredictorPage.css to center the text */
+/* But the styles below are what define the card's look */
+.result-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 32px;
+  border-top: 5px solid #E5E7EB; /* Default border */
+  transition: all 0.3s ease;
+}
+
+.result-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.result-card .probability {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 10px 0;
+  color: var(--color-text-light); /* Default color */
+}
+
+.result-card .risk-level-display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  display: inline-block;
+  color: #fff;
+  background-color: #9CA3AF; /* Default background */
+}
+
+.result-card .risk-message {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 450px;
+  margin: 10px auto 0;
+  color: var(--color-text-light);
+}
+
+/* --- Dynamic Colors --- */
+
+/* 1. Low Risk (Green) */
+.result-card.risk-low { border-top-color: var(--color-secondary); }
+.result-card.risk-low .probability { color: var(--color-secondary); }
+.result-card.risk-low .risk-level-display { background-color: var(--color-secondary); }
+
+/* 2. Borderline (Yellow/Orange) */
+.result-card.risk-borderline { border-top-color: #f39c12; }
+.result-card.risk-borderline .probability { color: #f39c12; }
+.result-card.risk-borderline .risk-level-display { background-color: #f39c12; }
+
+/* 3. High (Red) */
+.result-card.risk-high { border-top-color: #e74c3c; }
+.result-card.risk-high .probability { color: #e74c3c; }
+.result-card.risk-high .risk-level-display { background-color: #e74c3c; }
+
+/* 4. Very High (Dark Red) */
+.result-card.risk-very-high { border-top-color: #c0392b; }
+.result-card.risk-very-high .probability { color: #c0392b; }
+.result-card.risk-very-high .risk-level-display { background-color: #c0392b; }
+
+/* 5. Critical (Pulsing Dark Red) */
+.result-card.risk-critical { 
+  border-top-color: #9b2015; 
+  animation: pulse-red 1.5s infinite;
+}
+.result-card.risk-critical .probability { color: #9b2015; }
+.result-card.risk-critical .risk-level-display { background-color: #9b2015; }
+
+/* A simple pulse animation for critical risk */
+@keyframes pulse-red {
+  0% { box-shadow: 0 10px 30px rgba(155, 32, 21, 0.05); }
+  50% { box-shadow: 0 10px 40px rgba(155, 32, 21, 0.3); }
+  100% { box-shadow: 0 10px 30px rgba(155, 32, 21, 0.05); }
+}
