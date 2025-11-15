@@ -126,8 +126,7 @@
   transform: none;
   box-shadow: none;
 }
-
-/* --- Result Area --- */
+ /* --- Result Area --- */
 .results-container {
   margin-top: 40px;
   width: 100%;

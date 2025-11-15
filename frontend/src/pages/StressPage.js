@@ -1,6 +1,6 @@
 // frontend/src/pages/StressPage.js
 
-import React, { useState, useEffect } from 'react';
+import React, {useEffect } from 'react';
 import './StressPage.css';
 import { FaBrain, FaBed, FaRunning, FaChevronRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
