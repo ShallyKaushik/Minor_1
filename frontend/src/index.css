@@ -35,8 +35,7 @@ html, body, #root {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  /* This prevents the horizontal scrollbar from *ever* appearing */
-  overflow-x: hidden; 
+  overflow-x: hidden; /* This prevents the horizontal scrollbar */
 }
 
 body {
@@ -57,14 +56,12 @@ body {
 
 .main-content {
   flex-grow: 1;
-  /* This ensures the content itself doesn't cause overflow */
   width: 100%; 
-  overflow-y: auto;   /* THIS IS THE FIX: Allow vertical scrolling */
+  overflow-y: auto;   /* Allow vertical scrolling */
   overflow-x: hidden; /* Keep horizontal scrolling disabled */
 }
 
 /* --- Navbar --- */
-/* Matches .navbar-header from Navbar.js */
 .navbar-header { 
   background-color: var(--color-bg-white);
   border-bottom: 1px solid var(--color-border);
@@ -73,19 +70,16 @@ body {
   top: 0;
   z-index: 999;
 }
-/* Matches .navbar-container from Navbar.js */
 .navbar-container {
-  padding: 1rem 4rem; /* Moved padding here */
+  padding: 1rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
-  box-sizing: border-box; /* Ensures padding is included in width */
+  box-sizing: border-box; 
 }
-
-/* Matches .navbar-links a from Navbar.js */
 .navbar-links a {
   color: var(--color-text);
   font-weight: 500;
@@ -93,18 +87,14 @@ body {
   margin: 0 1rem;
   transition: color 0.3s ease;
 }
-
 .navbar-links a:hover {
   color: var(--color-primary);
 }
-
 .navbar-links a.active {
   color: var(--color-primary);
   border-bottom: 2px solid var(--color-primary);
   padding-bottom: 2px;
 }
-
-/* Predict Button (Primary) */
 .navbar-button-primary {
   background: var(--gradient-ai);
   color: white;
@@ -116,13 +106,10 @@ body {
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
-
 .navbar-button-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
 }
-
-/* Login Button (Secondary) */
 .navbar-button-secondary {
   font-weight: 500;
   text-decoration: none;
@@ -138,138 +125,85 @@ body {
   color: var(--color-primary);
 }
 
-
-/* --- Hero Section --- */
-/* Matches .hero-section from DashboardPage.js */
-.hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 10%;
-  background: var(--color-bg-white);
-}
-
-/* Matches .hero-headline from DashboardPage.js */
-.hero-headline {
-  font-size: 3.2rem;
-  line-height: 1.2;
-  font-weight: 700;
-  color: var(--color-text);
-}
-
-/* Matches .hero-subheading from DashboardPage.js */
-.hero-subheading {
-  font-size: 1.1rem;
-  color: var(--color-text-light);
-  margin-top: 1rem;
-  max-width: 500px;
-}
-
-/* Matches .hero-button-primary from DashboardPage.js */
-.hero-button-primary {
-  background: var(--color-primary);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.9rem 1.8rem;
-  margin-top: 2rem;
-  cursor: pointer;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.hero-button-primary:hover {
-  background: var(--color-primary-dark);
-  transform: translateY(-2px);
-}
-
-/* Matches .hero-image from DashboardPage.js */
-.hero-image {
-  width: 440px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.5s ease;
-}
-
-.hero-image:hover {
-  transform: scale(1.03);
-}
-
-/* --- How It Works Section --- */
-/* Matches .how-it-works-section from DashboardPage.js */
-.how-it-works-section {
-  background-color: var(--color-bg);
-  text-align: center;
-  padding: 5rem 10%;
-}
-
-/* Matches .section-heading from DashboardPage.js */
-.how-it-works-section .section-heading {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-/* Matches .section-subheading from DashboardPage.js */
-.how-it-works-section .section-subheading {
-  color: var(--color-text-light);
-  max-width: 550px;
-  margin: 0 auto 3rem;
-}
-
-/* Matches .how-it-works-steps from DashboardPage.js */
-.how-it-works-steps {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-/* Matches .step-card from DashboardPage.s */
-.step-card {
-  background-color: var(--color-bg-white);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: 2rem;
-  width: 220px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.step-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* Matches .step-icon from DashboardPage.js */
-.step-card .step-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 1rem;
-  background: var(--gradient-ai);
-  border-radius: 50%;
-  padding: 10px;
-  /* Added display/align to center icon */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: white; /* Added for icon color */
-}
-
 /* --- Footer --- */
-/* Matches .footer-container from Footer.js */
 .footer-container {
+  width: 100%;
+  background-color: var(--color-bg); 
+  border-top: 1px solid var(--color-border); 
+  margin-top: auto; 
+  padding-top: 40px; 
+}
+.footer-content {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px; 
+}
+.footer-column h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text); 
+  margin-bottom: 16px; 
+}
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text); 
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.footer-mission {
+  font-size: 0.9rem;
+  color: var(--color-text-light); 
+  line-height: 1.6;
+  max-width: 300px;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-links a {
+  color: var(--color-text-light); 
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: var(--color-primary); 
+}
+.footer-social-icons {
+  display: flex;
+  gap: 20px;
+}
+.footer-social-icons a {
+  font-size: 1.5rem;
+  color: var(--color-text-light);
+  transition: color 0.2s;
+}
+.footer-social-icons a:hover {
+  color: var(--color-primary);
+}
+.footer-bottom-bar {
+  width: 100%;
+  max-width: 1280px;
+  margin: 24px auto 0; 
+  padding: 16px 24px; 
+  border-top: 1px solid var(--color-border); 
   text-align: center;
-  padding: 2rem;
-  background-color: var(--color-bg-white);
-  border-top: 1px solid var(--color-border);
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: var(--color-text-light);
 }
 
 /* --- Smooth Entrance Animation --- */
-/* You can add this 'fade-in' class to sections in React */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);

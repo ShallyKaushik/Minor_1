@@ -1,5 +1,5 @@
-/* This class is applied by PredictorPage.css to center the text */
-/* But the styles below are what define the card's look */
+/* frontend/src/components/ResultCard.css */
+
 .result-card {
   background: #FFFFFF;
   border-radius: 16px;
@@ -72,23 +72,8 @@
 .result-card.risk-critical .probability { color: #9b2015; }
 .result-card.risk-critical .risk-level-display { background-color: #9b2015; }
 
-/* A simple pulse animation for critical risk */
-@keyframes pulse-red {
-  0% { box-shadow: 0 10px 30px rgba(155, 32, 21, 0.05); }
-  50% { box-shadow: 0 10px 40px rgba(155, 32, 21, 0.3); }
-  100% { box-shadow: 0 10px 30px rgba(155, 32, 21, 0.05); }
-}
 
-
-/* frontend/src/components/ResultCard.css */
-
-/* ... (all your existing .result-card, .probability, 
-   and .risk-level-display styles are here) ... */
-
-
-/* --- ADD THESE NEW STYLES AT THE BOTTOM --- */
-
-/* --- 4. NEW: EMERGENCY BUTTON STYLES --- */
+/* --- EMERGENCY BUTTON STYLES --- */
 .emergency-button-container {
   border-top: 1px solid rgba(155, 32, 21, 0.2);
   padding: 24px;
@@ -106,19 +91,17 @@
   font-weight: 700;
   color: white;
   
-  /* Deep, serious red */
-  background-color: #c0392b; 
+  background-color: #c0392b; /* Deep, serious red */
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
   
-  /* Make it pulse to grab attention */
-  animation: pulse-red 2s infinite;
+  animation: pulse-red 2s infinite; /* Make it pulse to grab attention */
 }
 
 .emergency-button:hover {
-  background-color: #9b2015; /* Even darker red */
+  background-color: #9b2015; /* Darker red */
 }
 
 .geo-error {
@@ -130,7 +113,7 @@
   text-align: center;
 }
 
-/* Red pulse animation (different from the purple one) */
+/* A simple pulse animation for critical risk */
 @keyframes pulse-red {
   0% {
     transform: scale(1);

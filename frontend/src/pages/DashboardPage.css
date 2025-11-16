@@ -5,7 +5,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center all sections */
+  align-items: center;
 }
 
 /* --- 1. DYNAMIC WELCOME STYLES --- */
@@ -15,8 +15,6 @@
   padding: 40px 24px 0 24px;
   box-sizing: border-box;
 }
-
-/* Style for the "Get Started" prompt */
 .welcome-prompt-card {
   text-align: center;
   background: var(--gradient-ai);
@@ -55,8 +53,6 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
-/* Style for the "Welcome Back" result */
 .welcome-result-card {
   background: var(--color-bg-white);
   border: 1px solid var(--color-border);
@@ -83,14 +79,13 @@
   max-width: 600px;
   margin: 0 auto 24px auto;
 }
-/* THIS IS THE FIX FOR THE "ODD" ALIGNMENT */
 .welcome-result-card .result-card {
   width: 100%;
   box-shadow: none;
   border-top: 1px solid var(--color-border);
   border-radius: 0;
   background-color: var(--color-bg);
-  text-align: center; /* <-- THIS CENTERS YOUR 2.00% */
+  text-align: center; 
 }
 
 /* --- 2. HOW IT WORKS SECTION --- */
@@ -110,11 +105,12 @@
 }
 .how-it-works-section, 
 .features-v2-section, 
-.social-proof-section {
+.social-proof-section,
+.history-chart-section {
   width: 100%;
   max-width: 1280px;
   padding: 80px 24px;
-  box-sizing: border-box; /* Added this for safety */
+  box-sizing: border-box; 
 }
 .how-it-works-section {
   background-color: var(--color-bg-white);
@@ -154,23 +150,19 @@
 
 /* --- 3. UPGRADED FEATURES SECTION --- */
 .features-v2-section {
-  background-color: var(--color-bg); /* Use the light grey background */
+  background-color: var(--color-bg);
 }
-
 .feature-showcase {
   display: flex;
   flex-direction: column;
-  gap: 80px; /* More space between feature items */
+  gap: 80px;
 }
-
 .feature-showcase-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: center;
 }
-
-/* This is the "alternating" layout magic */
 .feature-showcase-item.reversed {
   grid-template-areas: "image text";
 }
@@ -180,13 +172,11 @@
 .feature-showcase-item.reversed .feature-showcase-image {
   grid-area: image;
 }
-
 .feature-showcase-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align text to the left */
+  align-items: flex-start;
 }
-
 .feature-showcase-icon {
   font-size: 2.5rem;
   margin-bottom: 24px;
@@ -198,21 +188,18 @@
   justify-content: center;
   background-color: var(--color-bg-white);
 }
-
 .feature-showcase-text h3 {
   font-size: 1.75rem;
   font-weight: 600;
   color: var(--color-text);
   margin: 0 0 12px 0;
 }
-
 .feature-showcase-text p {
   font-size: 1.1rem;
   color: var(--color-text-light);
   line-height: 1.7;
   margin-bottom: 24px;
 }
-
 .feature-showcase-button {
   display: inline-block;
   padding: 12px 24px;
@@ -228,7 +215,6 @@
   background-color: var(--color-primary-dark);
   transform: translateY(-2px);
 }
-
 .feature-showcase-image img {
   width: 100%;
   max-width: 500px;
@@ -236,7 +222,21 @@
   border-radius: 16px;
 }
 
-/* --- 4. SOCIAL PROOF --- */
+/* --- 4. HISTORY CHART STYLES --- */
+.history-chart-section {
+  background-color: var(--color-bg-white);
+}
+.chart-container {
+  width: 100%;
+  height: 400px;
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* --- 5. SOCIAL PROOF --- */
 .social-proof-section {
   background-color: var(--color-bg-white);
   display: grid;
@@ -266,7 +266,7 @@
   margin: 0;
 }
 
-/* --- 5. RESPONSIVE --- */
+/* --- 6. RESPONSIVE --- */
 @media (max-width: 900px) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -287,7 +287,10 @@
     align-items: center;
   }
   .feature-showcase-image {
-    order: -1; /* Move all images to the top on mobile */
+    order: -1;
     margin-bottom: 24px;
+  }
+  .social-proof-section {
+    grid-template-columns: 1fr;
   }
 }

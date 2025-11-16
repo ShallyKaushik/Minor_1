@@ -41,7 +41,7 @@
   color: var(--color-text-light);
 }
 
-/* --- NEW: Textarea Styles --- */
+/* --- Textarea Styles --- */
 .coach-form textarea {
   margin-top: 8px;
   width: 100%;
@@ -60,9 +60,6 @@
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
 }
-/* --- END OF NEW STYLES --- */
-
-/* (Your old .select styles are removed) */
 
 .generate-button {
   display: flex;
@@ -93,7 +90,7 @@
   box-shadow: none;
 }
 
-/* --- The Result (No changes) --- */
+/* --- The Result --- */
 .coach-result {
   padding: 0 32px 32px 32px;
 }
